@@ -1,0 +1,21 @@
+https://www.codechef.com/problems/CHEFGR
+
+Note  : What will happen if the number is exactly twice or thrice?
+
+
+for tc in range(int(input())):
+    
+    n,m = map(int,input().split(' '))
+    
+    li = list(map(int, input().split()))
+    
+    maximum = max(li)
+    li_diff = []
+    
+    for i in li:
+        li_diff.append(maximum-i)
+        
+    if m == sum(li_diff) or (m>=sum(li_diff) and (m-sum(li_diff))%n == 0) :
+        print('Yes')
+    else:
+        print('No')

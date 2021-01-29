@@ -1,0 +1,43 @@
+https://www.codechef.com/submit/CHEFA
+
+Note : 2 Solutions 1st justsuyash takes 0.66 seconds
+2nd takes 0.43
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li  = list(map(int,input().split()))
+    
+    li.sort()
+    
+    if len(li)%2 == 0:
+        turns = len(li)//2
+    else:
+        turns = len(li)//2 + 1
+        
+    summ = 0   
+    while turns > 0:
+        
+        summ = summ + li[-1]
+        li.pop()
+        if len(li)>1:
+            li.pop()
+        
+        turns -= 1
+        
+        
+        
+    print(summ)
+    
+    
+    
+# cook your dish here 
+for _ in range(int(input())):
+    n = int(input())
+    piles = list(map(int, input().split()))
+    piles.sort()
+    piles = piles[::-1]
+    print(sum(piles[::2]))

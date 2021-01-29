@@ -1,0 +1,25 @@
+https://www.codechef.com/problems/GRID
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li=[input() for j in range(0,n)]
+    
+    x=[True]*n
+    y=[True]*n
+    ans = 0
+    for i in range(len(li)-1,-1,-1):
+        
+        for j in range(len(li[i])-1,-1,-1):
+            
+            if (li[j][i]) == '#':
+                x[j]=False
+                y[i]=False
+                
+            elif (x[j] and y[i]):
+                ans += 1
+            
+    print(ans)

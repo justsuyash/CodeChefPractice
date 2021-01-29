@@ -1,0 +1,22 @@
+https://www.codechef.com/problems/CHEFZOT
+
+
+
+n = int(input())
+    
+li = list(map(int,input().split()))
+count = 0
+maximum = 0
+i = 0
+while i < len(li):
+        
+    if li[i]>0:
+        count = count+1
+        if maximum <= count:
+            maximum = count
+    else:
+        count = 0
+        
+    i+=1
+            
+print(maximum)

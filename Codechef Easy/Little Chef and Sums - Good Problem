@@ -1,0 +1,48 @@
+https://www.codechef.com/problems/CHEFSUM
+
+Note  : This is a good problem and borders gives a a criticcal way to look at basic alogrithmic thinking and critical one. Although this is not hard to solve but gived a beginner a good idea of things to be looking at. The following solution is just basic algorithminc thinking and below are analytical ones taking time 0.27 and 0.20 respoectively.
+
+
+# cook your dish here
+for tc in range(int(input())):
+    n = int(input())
+    li = list(map(int,input().split()))
+    index = 0
+    maximum = 10**10
+    for i in range(len(li)):
+        
+        sum_prefix = sum(li[:i+1])
+        sum_suffix = sum(li[i:])
+        
+        total = sum_suffix + sum_prefix
+        
+        if total < maximum:
+            maximum = total
+            index = i+1
+            
+            
+    print(index)
+    
+    
+# cook your dish here
+for tc in range(int(input())):
+    n = int(input())
+    li = list(map(int,input().split()))
+    index = 0
+    maximum = 10**10
+    for i in range(len(li)):
+        
+        if li[i] < maximum:
+            maximum = li[i]
+            index = i+1
+            
+            
+    print(index)
+    
+# cook your dish here
+for tc in range(int(input())):
+    n = int(input())
+    li = list(map(int,input().split()))
+    index = 0
+    minimum = min(li)
+    print(li.index(minimum)+1)

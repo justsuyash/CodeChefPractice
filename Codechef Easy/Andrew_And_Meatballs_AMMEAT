@@ -1,0 +1,22 @@
+https://www.codechef.com/problems/AMMEAT
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n,m = map(int,input().split())
+    
+    li = list(map(int,input().split()))
+    li.sort(reverse=True)
+    count = 1
+    t_balls = 0
+    if(sum(li)<m):
+        count=-1
+    else:
+        for i in range(n):
+            
+            t_balls += li[i]
+            if t_balls < m:
+                count = count+1
+    
+    print(count)
+                

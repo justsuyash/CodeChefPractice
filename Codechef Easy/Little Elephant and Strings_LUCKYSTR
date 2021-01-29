@@ -1,0 +1,22 @@
+https://www.codechef.com/problems/LUCKYSTR
+
+# cook your dish here
+k,n = map(int,input().split(' '))
+f_list = []
+
+for i in range(k):
+    f_list.append(input())
+
+
+for tc in range(n):
+    flag = 0
+    str1 = input()
+    for i in f_list:
+        if i in str1:
+            flag =1
+            
+    if flag == 1 or len(str1) >= 47:
+        print('Good')
+    else:
+        print('Bad')
+    

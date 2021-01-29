@@ -1,0 +1,13 @@
+https://www.codechef.com/problems/RRSTONE
+
+n,k=map(int,input().split())
+li=list(map(int,input().split()))
+if k==0: 
+    print(*li)
+else:
+    sub=max(li)
+    li=[sub-i for i in li]
+    if k%2==0:
+        sub=max(li)
+        li=[sub-i for i in li]
+    print(*li)

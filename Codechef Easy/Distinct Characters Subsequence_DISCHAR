@@ -1,0 +1,6 @@
+https://www.codechef.com/problems/DISCHAR
+
+
+for i in range(int(input())):
+    s=input()
+    print(len(set(s)))

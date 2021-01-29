@@ -1,0 +1,43 @@
+https://www.codechef.com/problems/LCPESY  - GGP(teach about counter)
+
+
+Note : First solution is without counter, the second one is with counter : 
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    str1 = input()
+    str2 = input()
+    
+    count = 0
+    frequency_mod = []
+    
+    if len(str1) >= len(str2):
+        
+        for i in str1:
+            if i not in frequency_mod:
+                count += min(str1.count(i),str2.count(i))
+                frequency_mod.append(i)
+    else:
+        
+        for i in str2:
+            if i not in frequency_mod:
+                count += min(str1.count(i),str2.count(i))
+                frequency_mod.append(i)
+        
+    print(count)
+    
+    
+    
+    
+2nd Solution :
+
+We subtract the from the len(list) from which we are subtracting as the non-common elements of the second(subtracted) list will not be counted. So what remains is the non-common elements of list 1 and when we subtract the total length from that of sum of count of unique elements we get the common elements
+
+from collections import Counter
+
+
+for _ in range(int(input())):
+    A, B = input(), input()
+    print(len(A) - sum((Counter(A) - Counter(B)).values()))

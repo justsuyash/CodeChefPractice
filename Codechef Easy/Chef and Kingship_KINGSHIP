@@ -1,0 +1,31 @@
+https://www.codechef.com/problems/KINGSHIP
+
+Note : Sum of products  = product of sum for the same number, we exploit this fact and get an amazing result.
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split()))
+    
+    li.sort()
+    
+    total = 0
+    
+    for i in range(1,len(li)):
+        total = total + li[0]*li[i]
+        
+        
+    print(total)
+    
+    
+Solution 2:
+
+# cook your dish here
+for i in range(int(input())):
+    n = input()
+    li = list(map(int,input().split()))
+    minimum = min (li)
+    li.pop(li.index(minimum))
+    print(minimum*sum(li))

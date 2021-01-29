@@ -1,0 +1,19 @@
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split()))
+    li.sort()
+    
+    count = 0
+    
+    for i in li:
+        
+        if i <= count:
+            count += 1
+        else:
+            break
+            
+            
+    print(count)

@@ -1,0 +1,57 @@
+
+https://www.codechef.com/problems/ATTIC
+
+
+Takes  : 5.80 Seconds
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    li = list(input())
+    i = 0
+    li2 = [li[0]]
+    count = 0
+    jumps = 0
+    jump_max = 0
+    for i in range(len(li)):
+        if li[i] == '.':
+            jumps = jumps+1
+        else:
+            if jumps > jump_max:
+                jump_max = jumps
+                count+=1
+            jumps = 0
+                
+    print(count)
+            
+            
+#Optimized:
+
+takes = 0.68 seconds just because of the readline input! YES THAT FAST!
+
+
+# attic cross
+from sys import stdin,stdout
+inp = stdin.readline
+
+t=int(inp())
+
+while(t):
+  t-=1
+  s=inp()
+  e=0;d=0;k=0
+  if s.count('.')==0:
+      print(0)
+  else:
+      for i in s:
+        if(i=='.'):
+          e+=1
+          
+        else:
+          if(e>d):  k+=1;d=e
+          e=0
+      print(k)#hg
+            
+        
+        
