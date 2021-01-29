@@ -1,0 +1,26 @@
+https://www.codechef.com/problems/ENTEXAM
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n,k,e,m = map(int,input().split(' '))
+    student_scores = []
+    
+    for i in range(n-1):
+        
+        li = list(map(int,input().split(' ')))
+        
+        student_scores.append(sum(li))
+        
+    sergey = sum(list(map(int,input().split())))
+    
+    student_scores.sort(reverse = True)
+    
+    score = max(0,student_scores[k-1]-sergey+1)
+        
+        
+    if score > m:
+        print('Impossible')
+    else:
+        print(score)

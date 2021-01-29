@@ -1,0 +1,20 @@
+https://www.codechef.com/submit/CHNGIT
+
+Note : We dont really need to convert this into integers string comparisions are faster but I did it anyway. Implement the string version of it and let me know the time in the comments below.
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    li = list(map(int,input().split(' ')))
+    s = list(set(li))
+    maxcount = 0
+    for i in range(len(s)):
+        if li.count(s[i]) > maxcount:
+            maxcount =  li.count(s[i])
+                    
+                    
+            
+    print(len(li)-maxcount)
+            

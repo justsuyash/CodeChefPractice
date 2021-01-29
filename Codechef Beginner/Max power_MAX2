@@ -1,0 +1,11 @@
+https://www.codechef.com/problems/MAX2
+
+note : try to prove this
+
+# cook your dish here
+n = int(input())
+bin = input()
+    
+rev_bin = bin[::-1]
+    
+print(rev_bin.index('1'))

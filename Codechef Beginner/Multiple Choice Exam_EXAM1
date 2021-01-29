@@ -1,0 +1,21 @@
+https://www.codechef.com/problems/EXAM1
+
+
+# cook your dish here
+for tc in range(int(input())):
+    n = int(input())
+    ans = input()
+    key = input()
+    i=0
+    count = 0
+    while i<min(len(ans),len(key)):
+        if ans[i]!=key[i]:
+            if key[i]=='N':
+                i+=1
+            else:
+                i+=2
+        else:
+            count+=1
+            i+=1
+            
+    print(count)

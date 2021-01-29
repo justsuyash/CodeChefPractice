@@ -1,0 +1,28 @@
+https://www.codechef.com/problems/ISITCAKE
+
+
+This is a really good question: By this time you already know that sting takes less time for everything than ints, sos below is method to do it with int. But we will give you a second solution as we dont really need the integer value of lists we are essentially just counting them
+
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    li1 = []
+    count = 0
+    
+    for i in range(10):
+        li = list(map(int,input().split(' ')))
+        li1.extend(li)
+    
+    
+    for i in li1:
+        if i <= 30:
+            count  += 1
+        
+        
+    if count >= 60:
+        print('yes')
+    else:
+        print('no')
+        

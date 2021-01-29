@@ -1,0 +1,24 @@
+https://www.codechef.com/problems/TSTROBOT
+
+Note : I was looking to find a solution by just counting L and R: Mabye if we start from a position of 'LR' or 'RL' we maybe able to do so. I will think on it further today
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n,m = map(int,input().split(' '))
+    
+    inputs = input()
+    count = 0
+    li = [0]
+    for i in range(len(inputs)):
+        if inputs[i] =='R':
+            count+=1
+            if count not in li:
+                li.append(count)
+        else:
+            count-=1
+            if count not in li:
+                li.append(count)
+    
+    print(len(li))

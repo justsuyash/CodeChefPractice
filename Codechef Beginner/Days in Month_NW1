@@ -1,0 +1,30 @@
+https://www.codechef.com/problems/NW1
+
+
+Note : There are just two things to keep in mind, 1. the names of the days 2.that you will exceed the index when the days goes after 'sunday' which the last day in the list.
+
+
+# cook your dish here
+
+li_day = ['mon','tues','wed','thurs','fri','sat','sun']
+
+for tc in range(int(input())):
+    
+    li_count = [4]*7
+    
+    s = input().split()
+    
+    x = int(s[0])
+    y = s[1]
+    
+    if x == 28:
+        pass
+    else:
+        diff = x-28
+        
+        for i in range(li_day.index(y),li_day.index(y)+diff):
+            li_count[i%7] += 1
+            
+            
+            
+    print(*li_count)

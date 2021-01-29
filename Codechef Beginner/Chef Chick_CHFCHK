@@ -1,0 +1,12 @@
+https://www.codechef.com/problems/CHFCHK
+
+Note : This is a really funny question, it tries to trick you, but dont be fooled.
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split()))
+    
+    print(min(li))

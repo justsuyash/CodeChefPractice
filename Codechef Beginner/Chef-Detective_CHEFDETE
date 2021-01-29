@@ -1,0 +1,33 @@
+https://www.codechef.com/problems/CHEFDETE
+
+
+Note : the first solution gives TLE, there is a tip to be noted here, strings take a lot longer to compare than int, so keep doing it.
+
+# cook your dish here
+n = int(input())
+
+li = list(map(int,input().split()))
+    
+for i in range(1,n+1):
+    if (li.count(i)==0):
+        print(i,end=' ')
+        
+        
+#This solution takes 0.06 seconds
+
+# cook your dish here
+n = int(input())
+    
+li = list(map(int,input().split()))
+
+count = [1]*(n+1)
+
+for i in li:
+    count[i] = 0
+    
+print(*(i for i in range(1,n+1) if count[i]))
+
+
+so whats the difference: the difference is we the number of criminals is always going to be less than totaal number of gang members hence this printing takes less time.
+
+(Not clear make it clear)

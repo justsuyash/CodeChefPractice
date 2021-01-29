@@ -1,0 +1,25 @@
+# cook your dish here
+#https://www.codechef.com/problems/GOODBAD
+
+
+for tc in range(int(input())):
+    m,n=map(int,input().split(" "))
+    string = input()
+    count1 = 0
+    count2 = 0
+    for i in string:
+        if i.islower():
+            count1 += 1
+        else:
+            count2 += 1
+            
+    if count1 <= n and count2<=n:
+        print('both')
+    elif count1 >= m-n:
+        print('chef')
+    elif count2 >= m-n:
+        print('brother')
+    else:
+        print('none')
+    
+# I was right that I was wrong about the 'both' case

@@ -1,0 +1,33 @@
+https://www.codechef.com/problems/ENCMSG
+
+
+Note : Looks complicated but is a really simple problem, also this is a great way to develop algorithmic thinking.
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    from string import ascii_lowercase as alphabet
+    alpha_rev = ''.join(reversed(alphabet))
+    
+    n = int(input())
+    string = input()
+    string_swap = ''
+    for i in range(0,(n//2)*2,2):
+        string_swap = string_swap+string[i+1]+string[i]
+     
+    if n%2 !=0:
+        string_swap += string[-1] 
+        
+    
+    encoded = ''    
+    for i in range(len(string_swap)):
+        
+        encoded += alpha_rev[alphabet.index(string_swap[i])]
+        
+        
+    
+    print(encoded)
+        
+    
+    

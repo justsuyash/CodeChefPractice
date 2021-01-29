@@ -1,0 +1,37 @@
+https://www.codechef.com/problems/SINS
+
+Note : for two numbers considering all things equal, the math.gcd is about 0.17(about slightly less) seconds faster than the self build gcd, that means for more than 2 number for everynumber the taking the gcd will add 0.17 seconds to the loop. We can even do the third solution to make it the fastest:
+
+
+
+# cook your dish here
+from math import gcd
+
+for tc in range(int(input())):
+    
+    m,b = map(int,input().split(' '))
+    
+    print(gcd(m,b)*2)
+    
+2nd Solution :
+
+# cook your dish here
+def gcd(a,b):
+    if a == 0:
+        return b
+    else:
+        return gcd(b%a,a)
+
+for tc in range(int(input())):
+    
+    m,b = map(int,input().split(' '))
+    
+    print(gcd(m,b)*2)
+    
+    
+3rd Soulution :
+
+from sys import stdin 
+from math import gcd
+for _ in range(int(stdin.readline())):
+	print(2*gcd(*map(int,stdin.readline().split())))

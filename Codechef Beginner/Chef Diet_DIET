@@ -1,0 +1,25 @@
+https://www.codechef.com/problems/DIET
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n,k = map(int,input().split(' '))
+    
+    buys = list(map(int,input().split()))
+    
+    accumulated = 0
+    flag = 1
+    
+    for i in range(len(buys)):
+        if buys[i]+accumulated >= k:
+            accumulated += buys[i]-k
+        else:
+            flag=0
+            break
+        
+    
+    if flag == 1:
+        print('YES')
+    else:
+        print('NO',i+1)

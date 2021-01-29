@@ -1,0 +1,26 @@
+https://www.codechef.com/problems/LISDIGIT
+
+Note : Learn how to use the '.join' keyword.
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split(' ')))
+    
+    for i in li:
+        print(i,end='')
+        
+    print()
+    
+    
+Second Solution :
+
+
+ans = list()
+
+for _ in range(int(input())):
+    input()
+    ans.append(input().replace(' ', ''))
+print('\n'.join(ans))

@@ -1,0 +1,49 @@
+https://www.codechef.com/problems/CHEFAPAR
+Great YT: look at the third silution one changed lined lead to a reduction of 0.14 seconds (0.22 to 0.08)
+takes 0.22 seconds(second solution takes 0.02 seconds)
+
+for tc in range(int(input())):
+    
+    n  = int(input())
+    
+    months = list(map(str,input().split()))
+    
+    if '0' not in months:
+        print(0)
+    else:
+        i = months.index('0')
+        li = months[i:]
+        
+        ans = li.count('0')*1100+li.count('1')*100
+        
+        print(ans)
+        
+        
+#Second Solution:(takes 0.02 Seconds)
+
+for _ in range(int(input())):
+    n = int(input())
+    M = input().split()
+    s = M.count('0') * 1000
+    i = (M + ['0']).index('0')
+    s += (n - i) * 100
+    print(s)
+    
+    
+#Third Solution takes:(0.08) just by changing one line of code.
+
+for tc in range(int(input())):
+    
+    n  = int(input())
+    
+    months = input().split(' ')
+    
+    if '0' not in months:
+        print(0)
+    else:
+        i = months.index('0')
+        li = months[i:]
+        
+        ans = li.count('0')*1100+li.count('1')*100
+        
+        print(ans)

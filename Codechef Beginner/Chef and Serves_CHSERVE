@@ -1,0 +1,20 @@
+https://www.codechef.com/problems/CHSERVE 
+
+
+
+Note : If you use faster read writes you can decrease the time drastically, 
+Time  : 0.59
+
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    p1,p2,k = map(int,input().split(' '))
+    
+    points = p1+p2
+    
+    if (points//k)%2 == 0:
+        print('CHEF')
+    else:
+        print('COOK')

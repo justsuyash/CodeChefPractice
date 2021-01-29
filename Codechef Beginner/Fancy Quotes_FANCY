@@ -1,0 +1,12 @@
+https://www.codechef.com/problems/FANCY
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    quote = list(input().split(' '))
+    
+    if 'not' in quote:
+        print('Real Fancy')
+    else:
+        print('regularly fancy')

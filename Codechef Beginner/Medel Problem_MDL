@@ -1,0 +1,15 @@
+https://www.codechef.com/problems/CHEGLOVE
+
+Note : Interesting Problem, sort of forces you to think about other ways to solve a problem
+
+# cook your dish here
+for i in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split(' ')))
+    
+    if li.index(max(li)) < li.index(min(li)):
+        print(max(li),min(li))
+    else:
+        print(min(li),max(li))

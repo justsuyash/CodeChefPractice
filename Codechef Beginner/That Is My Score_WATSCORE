@@ -1,0 +1,56 @@
+https://www.codechef.com/submit/WATSCORE
+
+Note : There is one complicated way to do it and there is an easier way to do it, this way is not that complicated actually, its merely to state a different way to solve a problem. You dont necessarily need to implement it in this way but just know the intuition of this might help you become a prolific thinker. Another menthod is also done below this code. Both Methods take 0.2 seconds unsurprisingly.
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+         
+    li1 = []
+    li2 = []
+        
+    for i in range(n):
+
+        x,y = map(int,input().split(' '))
+        
+        if x in li1 and y >= li2[li1.index(x)]:
+            li1[li1.index(x)] = x
+            li2[li1.index(x)] = y
+        elif x in li1 and y < li2[li1.index(x)]:
+            continue
+        else:
+            li1.append(x)
+            li2.append(y)
+    
+    total = 0
+    for i in range(len(li1)):
+        if li1[i] <= 8:
+            total = total+li2[i]
+            
+            
+    print(total)
+    
+    
+    
+## Second Way :
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = [0]*12
+    
+    for i in range(n):
+
+        x,y = map(int,input().split(' '))
+        
+        if li[x] < y:
+            li[x] = y
+    
+    total = sum(li[1:9])
+            
+    print(total)

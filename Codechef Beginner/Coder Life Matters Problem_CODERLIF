@@ -1,0 +1,33 @@
+https://www.codechef.com/problems/CODERLIF
+
+Note : Both int methods and string method took the same time of 0.02 seconds.
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    li = input()
+    
+    if '1 1 1 1 1 1' in li:
+        print('#coderlifematters')
+    else:
+        print('#allcodersarefun')
+        
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    li = list(map(int,input().split()))
+    flag = 0
+    for i in range(30):
+        
+        if sum(li[i:i+6]) > 5:
+            flag = 1
+            break
+        
+        
+        
+    if flag == 0:
+        print('#allcodersarefun')
+    else:
+        print('#coderlifematters')

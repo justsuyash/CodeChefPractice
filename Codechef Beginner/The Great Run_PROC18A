@@ -1,0 +1,16 @@
+https://www.codechef.com/problems/PROC18A
+
+
+for tc in range(int(input())):
+    
+    n,k = map(int,input().split(' '))
+    
+    li = list(map(int,input().split(' ')))
+    maximum = 0
+    for i in range(len(li)):
+        
+        if maximum < sum(li[i:i+k]):
+            maximum = sum(li[i:i+k])
+    
+    
+    print(maximum)

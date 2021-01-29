@@ -1,0 +1,15 @@
+https://www.codechef.com/submit/MATPAN
+
+from string import ascii_lowercase as alphabet
+for tc in range(int(input())):
+    li = list(map(int,input().split()))
+    string = input()
+    
+    price = 0
+    for i in alphabet:
+        
+        if i not in string:
+            price  += li[alphabet.index(i)]
+    
+    print(price)
+    

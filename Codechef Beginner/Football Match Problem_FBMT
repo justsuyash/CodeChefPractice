@@ -1,0 +1,58 @@
+https://www.codechef.com/problems/FBMT
+
+Note : These kind of probelm are very straingt forward, we can use sets to determing the different teams and then can count them.
+
+
+
+
+# cook your dish here
+for tc in range(int(input())):
+    scorers = []
+    n  = int(input())
+    
+    if n == 0:
+        print("Draw")
+        
+    else:    
+        for i in range(n):
+            scorers.append(input())
+        
+        set_teams  = set(scorers)
+        if len(set_teams) > 1:
+            team0 = set_teams.pop()
+            team1 = set_teams.pop()
+            if scorers.count(team0) > scorers.count(team1):
+                print(team0)
+            elif scorers.count(team0) < scorers.count(team1):
+                print(team1)
+            else:
+                print('Draw')
+        else:
+            print(set_teams.pop())
+  
+  
+# a slightly faster solution:
+
+
+def footBall(ls):
+    if(len(ls) == 0):
+        return "Draw"
+    lis = list(set(ls))
+    if(len(lis) == 1):
+        return lis[0]
+    c1 = ls.count(lis[0])
+    c2 = ls.count(lis[1])
+    if(c1 == c2):
+        return "Draw"
+    elif(c1 > c2):
+        return lis[0]
+    else:
+        return lis[1]
+
+
+t = int(input())
+for i in range(t):
+    n = int(input())
+    ls = [input() for j in range(n)]
+    print(footBall(ls))
+                

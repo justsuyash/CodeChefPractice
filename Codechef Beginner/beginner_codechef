@@ -1,0 +1,107 @@
+Contest Code:PRACTICE Problem Code:ATTND
+
+
+# cook your dish here
+for tc in range(int(input())):
+    n = int(input())
+    li = []
+    li1=[]
+    for i in range(n):
+        name,surname= map(str,input().split(' '))
+        li.append(name)
+        li1.append(surname)
+        
+    for i in range(len(li)):
+        
+        if (li[i] in li[i+1:]) or (li[i] in li[:i]):
+            print(li[i], end=" ")
+            print(li1[i])
+        else:
+            print(li[i])
+            
+         
+Contest Code:PRACTICE Problem Code:NOTINCOM
+
+Points :  Keep in mind that we dont need to compare numbers hence, we dont need to input as int
+check if int requires more time than the defatult inpout status (ofcourse it does)
+
+# cook your dish here
+for tc in range(int(int(input()))):
+    
+    a,b = map(int,input().split(' '))
+    count = 0
+    alice_li = set(input().split())
+    berta_li = set(input().split())
+    
+    print(len(alice_li.intersection(berta_li)))
+    
+Another intuitive way to do it :
+
+# cook your dish here
+for tc in range(int(int(input()))):
+    
+    a,b = map(int,input().split(' '))
+    count = 0
+    alice_li = input().split()
+    berta_li = input().split()
+    
+    c =alice_li+berta_li
+    
+    
+    print(len(c)-len(set(c)))
+
+
+
+Playing with Strings Problem Code: PLAYSTR:
+
+just count the number of 1's as we can shift the ones and make it equal, also it is given that string length will be equal. If that was not given we would have to add a new constraint that checks for the length and returns "NO" if length is not equal
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    
+    n = int(input())
+    
+    str1 = input()
+    str2 = input()
+    
+    if str1.count('1') == str2.count('1'):
+        print('YES')
+    else:
+        print('NO')
+
+
+Contest Code:PRACTICE Problem Code:STICKS
+Note : Easy list operation probelm, when thinking of such problems involving lists if you cant think of a silution of the top of your head, always think of operations that can be performed on the list
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split(' ')))
+    length = 0
+    breadth = 0
+    li.sort()
+    i = n-2
+    dim = []
+    while  i>=0:
+        if li[i] == li[i+1]:
+            dim.append(li[i])
+            i = i-2
+        else:
+            i = i-1
+            
+        if len(dim) ==2:
+            break
+    
+    if len(dim) ==2 and dim[0]*dim[1] > 0:
+        print(dim[0]*dim[1])
+    else:
+        print(-1)
+
+
+
+
+

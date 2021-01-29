@@ -1,0 +1,25 @@
+https://www.codechef.com/problems/SNELECT
+
+Note : This is a probelm of counting deaths. Count the dead snakes and it all game. :)
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    string  = input()
+    
+    j = 0
+    deaths = 0
+    while j<len(string)-1:
+        if string[j]!=string[j+1]:
+            deaths += 1 
+            j = j+2
+        else:
+            j= j+1 
+            
+    
+    if string.count('s') - deaths > string.count('m'):
+        print('snakes')
+    elif string.count('s') - deaths == string.count('m'):
+        print('tie')
+    else:
+        print('mongooses')

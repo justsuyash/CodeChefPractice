@@ -1,0 +1,58 @@
+https://www.codechef.com/problems/GIFTSRC
+
+Approach one, solve as you go takes 0.5 seconds.
+
+# cook your dish here
+for tc in range(int(input())):
+    n =  int(input())
+    
+    li = list(input())
+    
+    start = [0,0]
+    axis0 = ['L','R']
+    axis1 = ['U','D']
+    prev = ''
+    for i in range(n):
+        if li[i] in axis0 and prev not in axis0:
+            
+            if li[i] == 'L':
+                start[0] -= 1
+            else:
+                start[0] += 1
+            prev = li[i]
+            
+        elif li[i] in axis1 and prev not in axis1:
+            if li[i] == 'U':
+                start[1] += 1
+            else:
+                start[1] -= 1
+                
+            prev = li[i]
+            
+    print(*start)
+    
+    
+Approach 2 : takes 0.4 seconds, we count the number of changes in axis and then make all the moves in a single pass:
+
+
+# cook your dish here
+for tc in range(int(input())):
+    n =  int(input())
+    
+    li = list(input())
+    
+    start = [0,0]
+    axis0 = ['L','R']
+    axis1 = ['U','D']
+    moves = ['']
+    for i in range(n):
+        if moves[-1] not in axis0 and li[i] in axis0:
+            moves.append(li[i])
+        elif moves[-1] not in axis1 and li[i] in axis1:
+            moves.append(li[i])
+            
+            
+    start[0] = moves.count('R') - moves.count('L')
+    start[1] = moves.count('U') - moves.count('D')
+    
+    print(*start)

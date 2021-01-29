@@ -1,0 +1,21 @@
+https://www.codechef.com/problems/CHNGOR
+
+
+# cook your dish here
+
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    cost1 = 0
+    
+    li = list(map(int,input().split()))
+    
+    for i in range(n):
+        
+        cost1 = cost1 | li[i]
+        
+        
+    print(cost1)
+        
+        

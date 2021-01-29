@@ -1,0 +1,18 @@
+https://www.codechef.com/problems/PCJ18A
+
+Note : This problem can be solved using two loops, but this is more compact solution the space complexity increases with two loops as it uses 2 arrays to store floors.
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n,req = map(int,input().split(' '))
+    total = 0
+    prev = 0
+    for i in range(req):
+        f,d = map(int,input().split(' '))
+        total += abs(f-prev) 
+        total += abs(d-f)
+        prev = d    
+    print(total)
+    
+    

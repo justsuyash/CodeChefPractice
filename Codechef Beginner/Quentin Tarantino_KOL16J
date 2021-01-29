@@ -1,0 +1,24 @@
+https://www.codechef.com/submit/KOL16J
+
+
+for tc in range(int(input())):
+    
+    n = int(input())
+    flag = 1 
+    li = list(map(int,input().split()))
+    
+    li1 = list(range(1,n+1))
+    
+    for i in li1:
+        if i not in li:
+            flag = 0
+            break
+        
+    if li == li1:
+        flag = 0
+    
+    if flag==0:
+        print('no')
+    else:
+        print('yes')
+            

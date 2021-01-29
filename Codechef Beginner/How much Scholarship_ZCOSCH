@@ -1,0 +1,12 @@
+https://www.codechef.com/problems/ZCOSCH
+
+
+# cook your dish here
+r = int(input())
+
+if r<=50:
+    print(100)
+elif r>50 and r<=100:
+    print(50)
+elif r>100:
+    print(0)

@@ -1,0 +1,26 @@
+https://www.codechef.com/problems/MSNSADM1
+
+Note : Relatively simple problem, just take care of the minus signs:
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    goals = list(map(int,input().split()))
+    
+    fouls = list(map(int,input().split()))
+    
+    net = []
+    
+    for i in range(n):
+        
+        result = goals[i]*20 - fouls[i]*10
+        
+        if result >0:
+            net.append(result)
+        else:
+            net.append(0)
+            
+            
+    print(max(net))

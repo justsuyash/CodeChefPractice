@@ -1,0 +1,34 @@
+https://www.codechef.com/problems/CHEGLOVE
+
+Note : We must try an alternate way to solve this problem ( right now the time complexity is O(n) )
+
+# cook your dish here
+for tc in range(int(input())):
+    n = int(input())
+    fingers = list(map(int,input().split()))
+    glove = list(map(int,input().split()))
+    
+    
+    flag_front = 1 
+    flag_back = 1
+    
+    for i in range(n):
+        if glove[i]< fingers[i]:
+            flag_front = 0s
+            break
+            
+    for i in range(n):
+        if glove[-i-1] < fingers[i]:
+            flag_back = 0
+            break
+        
+        
+    if flag_front == 1 and flag_back ==1:
+        print('both')
+    elif flag_front == 1 and flag_back == 0:
+        print('front')
+    elif flag_back == 1 and flag_front==0:
+        print('back')
+    else:
+        print('none')
+            

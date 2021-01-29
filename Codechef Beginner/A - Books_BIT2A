@@ -1,0 +1,54 @@
+https://www.codechef.com/problems/BIT2A
+
+Note : There are a lot of methods to approach this problem, first we can count from the beginning to the end of the list but that would be the slowest solution so we wont even justify it(no harsh words). Next is shown below we pick the first element and start counting from the end of the list that takes 0.10 seconds and algorithmically is a lot better.(explain how? - since as soon as we come to the element that is equal to the value of the first element we break our loop) the third method is the most powerful and algorithmically best.
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split(' ')))
+    count = [0]*n
+    li.sort()
+    
+    
+    
+    for i in range(n):
+        for j in range(n-1,i,-1):
+            if li[i] == li[j]:
+                break
+            else:
+                count[i] += 1
+                
+                
+    print(*count)
+    
+    
+    
+### Third Method
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n = int(input())
+    
+    li = list(map(int,input().split(' ')))
+
+    count1 = [0]*n
+    li.sort()
+    
+    
+    
+    for i in range(n):
+        count = n - i - 1
+        for j in range(i+1,n):
+            if li[i] != li[j]:
+                break
+            else:
+                count -= 1
+        count1[i] = count
+        
+                
+                
+    print(*count1)

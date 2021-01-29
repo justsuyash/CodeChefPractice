@@ -1,0 +1,22 @@
+https://www.codechef.com/problems/LADDU
+
+
+for tc in range(int(input())):
+	n, nationality=input().split()
+	n=int(n)
+	laddu=0
+	for i in range(n):
+		s=list(input().split())
+		if s[0]=='CONTEST_WON':
+			laddu+=(300)+max((20-int(s[-1])), 0)
+		elif s[0]=='BUG_FOUND':
+			laddu+=int(s[-1])
+		elif s[0]=='TOP_CONTRIBUTOR':
+			laddu+=300
+		else:
+			laddu+=50
+	if nationality=='INDIAN':
+		l=laddu//200
+	else:
+		l=laddu//400
+	print(l)

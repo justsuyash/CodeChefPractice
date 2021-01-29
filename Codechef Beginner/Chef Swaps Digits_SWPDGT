@@ -1,0 +1,28 @@
+https://www.codechef.com/problems/SWPDGT
+
+
+
+t = int(input())
+
+
+        
+while t:
+    a, b = input().split()
+    max = int(a)+int(b)
+    a = list(a)
+    b = list(b)
+    
+    for i in range(len(a)):
+        
+        for j in range(len(b)):
+            a[i], b[j] = b[j], a[i]    
+            
+            num = int("".join(a))+int("".join(b))
+            if num>max:
+                max = num
+            
+            a[i], b[j] = b[j], a[i]    
+        
+        
+    print(max)
+    t-=1

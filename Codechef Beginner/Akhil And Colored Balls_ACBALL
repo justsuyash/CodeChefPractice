@@ -1,0 +1,20 @@
+https://www.codechef.com/problems/ACBALL
+
+Note this solution has been given to have, both rows being equal. Can you generalize?(i.e solve it without rows the constraint of rows being equal?)
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    string1 = input()
+    string2 = input()
+    string3 = ''
+    for i in range(len(string1)):
+        if string1[i] == string2[i] == 'W':
+            string3 += 'B'
+        elif string1[i] == string2[i] == 'B':
+            string3 += 'W'
+        elif string1[i] != string2[i]:
+            string3+= 'B'
+    
+    
+    print(string3)

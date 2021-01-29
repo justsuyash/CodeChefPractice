@@ -1,0 +1,7 @@
+https://www.codechef.com/problems/CHFTIRED
+# cook your dish here
+for tc in range(int(input())):
+    
+    a,b = map(int,input().split(' '))
+    
+    print('YES')
