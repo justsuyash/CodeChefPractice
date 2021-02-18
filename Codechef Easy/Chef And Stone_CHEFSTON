@@ -1,0 +1,18 @@
+https://www.codechef.com/problems/CHEFSTON
+
+
+# cook your dish here
+for tc in range(int(input())):
+    
+    n,k = map(int,input().split(' '))
+    
+    time = list(map(int,input().split()))
+    
+    profit = list(map(int,input().split()))
+    
+    total = []
+    
+    for i in range(n):
+        total.append((k//time[i]) * (profit[i]))
+        
+    print(max(total))
